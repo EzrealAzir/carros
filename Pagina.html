@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apasionados por los Carros</title>
+    <style>
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f5;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            display: flex; /* Para una barra de navegación horizontal */
+            justify-content: center;
+            flex-wrap: wrap; /* Para que los ítems se envuelvan en pantallas pequeñas */
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0;
+            display: block; /* Para que el área clickable sea mayor */
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #e74c3c;
+            border-radius: 3px;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+            margin: 20px auto;
+            overflow: hidden;
+            padding: 0 20px; /* Padding a los lados */
+        }
+
+        /* Secciones */
+        section {
+            background-color: #fff;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+        section h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+            display: inline-block; /* Para que el borde sea solo del texto */
+        }
+
+        /* Estilos de Marca (flexbox) */
+        .marca-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fcfcfc;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .marca-info {
+            flex: 2;
+            padding-right: 30px;
+            min-width: 300px; /* Mínimo para que el texto no sea muy estrecho */
+        }
+        .marca-imagen {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            margin-left: 20px;
+        }
+        .marca-imagen img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Listas de Modelos */
+        .modelos-lista {
+            list-style: none;
+            padding: 0;
+        }
+        .modelo {
+            background-color: #f9f9f9;
+            margin-bottom: 8px;
+            padding: 10px 15px;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+        }
+        .modelo:hover {
+            transform: translateX(5px);
+        }
+
+        /* Subsecciones dentro de las secciones principales */
+        .sub-section-content {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fcfcfc;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .sub-section-content h3 {
+            color: #34495e;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .sub-section-content ul {
+            list-style: disc inside;
+            padding-left: 20px;
+        }
+        .sub-section-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Infografías */
+        .infografia {
+            background-color: #f0f4f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+            text-align: center;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+        }
+        .infografia img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px
+             rgba(0,0,0,0.1);
+        }
+
+        /* Pie de Página */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #2c3e50;
+            color: #fff;
+            margin-top: 30px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>El Fascinante Mundo de los Automóviles</h1>
+        <p>Tu guía completa para explorar la pasión por los coches</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#marcas">Marcas</a></li>
+            <li><a href="#clasicos-tuning">Clásicos y Tuning</a></li>
+            <li><a href="#tecnologia-futuro">Tecnología y Futuro</a></li>
+            <li><a href="#eventos-cultura">Eventos y Cultura</a></li>
+            <li><a href="#compra-mantenimiento">Compra y Mantenimiento</a></li>
+            <li><a href="#infografias">Infografías</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="marcas">
+            <h2>Marcas de Automóviles</h2>
+            <p>Descubre la historia, los modelos icónicos y el legado de los fabricantes de automóviles más influyentes del mundo.</p>
+
+            <div class="marca-section">
+                <div class="marca-info">
+                    <h3>Toyota</h3>
+                    <p>Una de las marcas automotrices más grandes y confiables del mundo, conocida por su durabilidad, eficiencia y liderazgo en tecnología híbrida. Toyota ofrece una amplia gama de vehículos para cada necesidad, desde compactos hasta SUVs y camiones.</p>
+                    <h4>Modelos Destacados:</h4>
+                    <ul class="modelos-lista">
+                        <li class="modelo">Corolla (sedán versátil)</li>
+                        <li class="modelo">Camry (sedán mediano premium)</li>
+                        <li class="modelo">RAV4 (SUV compacto líder en ventas)</li>
+                        <li class="modelo">Prius (pionero de los híbridos)</li>
+                        <li class="modelo">Tacoma (pick-up robusta)</li>
+                    </ul>
+                    <h4>Fundador:</h4>
+                    <p>Kiichiro Toyoda</p>
+                </div>
+                <div class="marca-imagen">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Toyota_logo_%28Red%29.svg" alt="Logo de Toyota">
+                    </div>
+            </div>
+
+            <div class="marca-section">
+                <div class="marca-info">
+                    <h3>Ford</h3>
+                    <p>Una marca icónica estadounidense con una rica historia en la industria automotriz, pionera en la producción en masa y un legado de vehículos robustos y potentes. Ford ha sido un referente en la innovación automotriz global y la movilidad para las masas.</p>
+                    <h4>Modelos Destacados:</h4>
+                    <ul class="modelos-lista">
+                        <li class="modelo">Mustang (deportivo legendario)</li>
+                        <li class="modelo">F-150 (pick-up más vendida en EE. UU.)</li>
+                        <li class="modelo">Explorer (SUV familiar versátil)</li>
+                        <li class="modelo">Bronco (SUV todoterreno resurgido)</li>
+                        <li class="modelo">Transit (vehículo comercial)</li>
+                    </ul>
+                    <h4>Fundador:</h4>
+                    <p>Henry Ford</p>
+                </div>
+                <div class="marca-imagen">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Ford_Motor_Company_Logo.svg"" alt="Logo de Ford">
+                    </div>
+            </div>
+
+            <div class="marca-section">
+                <div class="marca-info">
+                    <h3>Volkswagen</h3>
+                    <p>Un fabricante alemán conocido por su diseño funcional, calidad de ingeniería y algunos de los autos más populares y vendidos de la historia. Volkswagen es sinónimo de vehículos confiables, versátiles y eficientes para el público en general, con un enfoque en la innovación y sostenibilidad.</p>
+                    <h4>Modelos Destacados:</h4>
+                    <ul class="modelos-lista">
+                        <li class="modelo">Golf (hatchback compacto icónico)</li>
+                        <li class="modelo">Beetle (el "Vocho" clásico y moderno)</li>
+                        <li class="modelo">Tiguan (SUV compacto popular)</li>
+                        <li class="modelo">Jetta (sedán global)</li>
+                        <li class="modelo">ID.4 (SUV eléctrico)</li>
+                    </ul>
+                    <h4>Fundador:</h4>
+                    <p>Ferdinand Porsche (bajo encargo del gobierno alemán)</p>
+                </div>
+                <div class="marca-imagen">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg" alt="Logo de Volkswagen">
+                    </div>
+            </div>
+
+            </section>
+
+        <section id="clasicos-tuning">
+            <h2>Clásicos y Tuning</h2>
+            <p>Sumérgete en el mundo de los automóviles que han trascendido el tiempo y las modificaciones que los llevan al siguiente nivel.</p>
+
+            <div class="sub-section-content">
+                <h3>Autos Clásicos Icónicos</h3>
+                <p>Explora la historia y el encanto de los vehículos que definieron generaciones. Desde muscle cars americanos hasta elegantes deportivos europeos, estos autos son más que metal y ruedas; son piezas de la historia automotriz.</p>
+                <ul>
+                    <li>**Ford Mustang (Primera Generación):** Un icono de la deportividad americana que revolucionó el mercado.</li>
+                    <li>**Volkswagen Beetle (Tipo 1):** El "Vocho", un símbolo de durabilidad y diseño accesible.</li>
+                    <li>**Porsche 911 (Clásico):** La pureza de la ingeniería alemana y un diseño atemporal.</li>
+                </ul>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/1965_Ford_Mustang_Fastback_2%2B2.jpg/1200px-1965_Ford_Mustang_Fastback_2%2B2.jpg" alt="Ford Mustang Clásico">
+                <p>La pasión por los clásicos reside en su historia, su diseño único y la experiencia de conducción que ofrecen.</p>
+            </div>
+
+            <div class="sub-section-content">
+                <h3>Modificaciones y Tuning</h3>
+                <p>El tuning es el arte de personalizar y mejorar un vehículo. Desde modificaciones para aumentar el rendimiento hasta cambios estéticos que reflejan la personalidad del dueño, las posibilidades son infinitas.</p>
+                <ul>
+                    <li>**Tuning de Rendimiento:** Mejoras en motor (turbo, reprogramación), suspensión, frenos y escape para optimizar la potencia y el manejo.</li>
+                    <li>**Tuning Estético:** Kits de carrocería, llantas personalizadas, pintura y envolturas, iluminación LED.</li>
+                    <li>**Estilos de Tuning:** JDM (Japanese Domestic Market), Euro Style, Muscle Car Tuning, Stance, Rat Rod, entre otros.</li>
+                </ul>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Lamborghini_Aventador_LP700-4_by_Liberty_Walk.jpg/1200px-Lamborghini_Aventador_LP700-4_by_Liberty_Walk.jpg" alt="Coche modificado (Tuning)">
+                <p>Antes de modificar tu coche, investiga bien y asegúrate de cumplir con las regulaciones locales.</p>
+            </div>
+        </section>
+
+        <section id="tecnologia-futuro">
+            <h2>Tecnología Automotriz y Futuro</h2>
+            <p>Explora las innovaciones que están transformando la forma en que nos movemos y el futuro de la industria automotriz.</p>
+
+            <div class="sub-section-content">
+                <h3>Vehículos Eléctricos e Híbridos</h3>
+                <p>La electrificación es el camino a seguir. Conoce los avances en baterías, autonomía, infraestructura de carga y cómo estos vehículos están contribuyendo a un futuro más sostenible.</p>
+                <ul>
+                    <li>**Tipos:** Eléctricos puros (BEV), híbridos (HEV), híbridos enchufables (PHEV), y vehículos de pila de combustible (FCEV).</li>
+                    <li>**Ventajas:** Menor huella de carbono, costos operativos reducidos, menor ruido, y rendimiento instantáneo.</li>
+                    <li>**Desafíos:** Autonomía, tiempo de carga, precio inicial, y la disponibilidad de infraestructura.</li>
+                </ul>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Tesla_Model_3_2019.jpg/1200px-Tesla_Model_3_2019.jpg" alt="Tesla Model 3">
+                <p>Marcas como Tesla, Hyundai y Volkswagen están liderando la revolución de los vehículos eléctricos.</p>
+            </div>
+
+            <div class="sub-section-content">
+                <h3>Conducción Autónoma</h3>
+                <p>Los coches sin conductor están más cerca de lo que imaginas. Desde asistentes de estacionamiento hasta sistemas completamente autónomos, la tecnología promete mayor seguridad y eficiencia en las carreteras.</p>
+                <ul>
+                    <li>**Niveles de Autonomía:** Desde el Nivel 0 (sin automatización) hasta el Nivel 5 (automatización completa en todas las condiciones).</li>
+                    <li>**Tecnologías Clave:** Sensores (radares, cámaras, LiDAR), inteligencia artificial, GPS de alta precisión y comunicación V2X.</li>
+                    <li>**Impacto:** Reducción de accidentes, optimización del tráfico, nuevas oportunidades de negocio y desafíos éticos y legales.</li>
+                </ul>
+                 
+        
